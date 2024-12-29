@@ -1,21 +1,17 @@
-
-
- <template>
-  <div class=" grid gap-4 justify-center items-center"> 
-          <h1 class="text-7xl text-red-600 font-bold underline">
-        Count 
-        </h1>
-        <button @click="increment" class="mt-5 px-7 py-4 bg-green-500 rounded-md text-3xl text-white" > increment = {{ count }}</button>
+<template>
+  <div class="container" style="padding-top:60px">
+    <h1>Compteur</h1>
+    <p>
+      Compteur {{ count }} x 2= {{ double }}
+    </p>
+    <button @click="increment">Increment</button>
   </div>
 </template>
 
+<script setup>
+import { ref, computed } from 'vue';
 
-  <script setup>
-  import { ref } from 'vue'
-  const count = ref(0);
-
-  const increment = () => {
-    count.value++;
-  }
-  
-  </script>.gitattribute
+const count = ref(0);
+const double = computed(() => count.value *2);
+const increment = () => count.value++;
+</script>
