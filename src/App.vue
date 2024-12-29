@@ -1,6 +1,6 @@
 <template>
   <div class="container" style="padding-top:60px">
-    <h1>Compteur</h1>
+    <h1>Compteur </h1>
     <p>
       Compteur {{ count }} x 2= {{ double }}
     </p>
